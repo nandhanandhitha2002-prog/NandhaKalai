@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NANDHA — A Story For KALAI</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#050505;color:#fff;font-family:Montserrat,sans-serif}
+body{overflow:hidden}.scene{position:fixed;inset:0;display:grid;place-items:center;text-align:center;opacity:0;visibility:hidden;transition:opacity 1.4s ease}.scene.active{opacity:1;visibility:visible}
+.bg{position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,#55263e 0,#160d15 35%,#030303 78%);transform:scale(1.05);animation:zoom 9s ease-in-out infinite alternate}
+.bg2{position:absolute;inset:0;background:linear-gradient(90deg,#000b,#0000,#000b)}
+.grain{position:fixed;inset:-50%;z-index:10;pointer-events:none;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:noise .15s steps(2) infinite}
+.content{position:relative;z-index:2;padding:25px}.tiny{font-size:10px;letter-spacing:7px;text-transform:uppercase;color:#d7b1c2}.title{font-family:"Playfair Display",serif;font-size:clamp(58px,16vw,150px);line-height:.82;margin:25px 0;background:linear-gradient(110deg,#fff,#efb1cc,#fff);-webkit-background-clip:text;color:transparent;text-shadow:0 0 40px #e76d9a33}.line{width:90px;height:1px;background:#e6a6c1;margin:28px auto}.quote{font-family:"Playfair Display",serif;font-size:clamp(20px,5vw,38px);line-height:1.4;max-width:720px}.gold{color:#efb4cc}.btn{margin-top:30px;padding:14px 25px;border:1px solid #ffffff55;border-radius:50px;background:#ffffff0b;color:white;letter-spacing:2px;cursor:pointer;backdrop-filter:blur(10px)}
+.photo{width:min(72vw,390px);height:min(72vw,390px);margin:20px auto;border:1px solid #ffffff33;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#281722,#0e0b10);box-shadow:0 30px 90px #000;transform:rotate(-2deg);font-size:14px;color:#c7b5be}
+.photo span{font-size:55px;display:block;margin-bottom:15px}.climax{font-size:clamp(38px,10vw,90px);font-family:"Playfair Display",serif}.signature{font-family:"Playfair Display",serif;font-size:25px;color:#e9b0c9;margin-top:25px}
+.bar{position:fixed;bottom:0;left:0;height:2px;background:#e89abb;width:0;z-index:20}.skip{position:fixed;right:18px;bottom:18px;z-index:30;color:#fff8;background:#ffffff12;border:1px solid #fff3;border-radius:30px;padding:8px 13px;font-size:11px;cursor:pointer}
+.heart{position:fixed;z-index:15;pointer-events:none;bottom:-30px;animation:rise 5s linear forwards}
+@keyframes zoom{to{transform:scale(1.15)}}@keyframes noise{0%{transform:translate(0,0)}25%{transform:translate(2%, -1%)}50%{transform:translate(-1%,2%)}75%{transform:translate(1%,1%)}100%{transform:translate(-2%,-1%)}}
+@keyframes rise{to{transform:translateY(-115vh) translateX(var(--x)) rotate(360deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="grain"></div><div class="bar" id="bar"></div>
+<button class="skip" onclick="next()">SKIP ›</button>
+
+<section class="scene active" id="s0"><div class="bg"></div><div class="bg2"></div><div class="content">
+<div class="tiny">A cinematic birthday story</div><div class="line"></div>
+<div style="font-size:13px;letter-spacing:5px">NANDHA</div>
+<p style="margin-top:18px;color:#bdaab4">presents</p>
+<h1 class="title">KALAI</h1>
+<div class="line"></div><p class="tiny">ONE SPECIAL DAY · ONE SPECIAL PERSON</p>
+<button class="btn" onclick="start()">ENTER THE STORY ✦</button>
+</div></section>
+
+<section class="scene" id="s1"><div class="bg"></div><div class="bg2"></div><div class="content">
+<div class="tiny">Chapter 01</div><div class="line"></div>
+<div class="quote">“Some people enter our life quietly…<br>and somehow become <span class="gold">everything.</span>”</div>
+</div></section>
+
+<section class="scene" id="s2"><div class="bg"></div><div class="bg2"></div><div class="content">
+<div class="tiny">Chapter 02 · Memory Reel</div>
+<div class="photo"><div><span>📸</span>YOUR BEST PHOTO GOES HERE<br><small>Replace this with Kalai's photo</small></div></div>
+<p class="tiny">Every frame has a memory.</p>
+</div></section>
+
+<section class="scene" id="s3"><div class="bg"></div><div class="bg2"></div><div class="content">
+<div class="tiny">Chapter 03 · The Letter</div><div class="line"></div>
+<div class="quote">“Kalai…<br>your smile has a way of making ordinary moments feel special.”</div>
+<div class="line"></div><p style="color:#c9b7c0">— With love, Nandha</p>
+</div></section>
+
+<section class="scene" id="s4"><div class="bg"></div><div class="bg2"></div><div class="content">
+<div class="tiny">The Birthday Scene</div><div class="climax">HAPPY<br><span class="gold">BIRTHDAY</span><br>KALAI</div>
+<p class="signature">🎂 ❤️ ✨</p>
+</div></section>
+
+<section class="scene" id="s5"><div class="bg"></div><div class="bg2"></div><div class="content">
+<div class="tiny">The Final Frame</div><div class="line"></div>
+<div class="quote">“Every story has a special character.<br><span class="gold">In mine, it's you.</span>”</div>
+<div class="line"></div><div class="signature">Forever special — Nandha ❤️</div>
+</div></section>
+
+<script>
+let i=0,timer;
+const scenes=[...document.querySelectorAll('.scene')],bar=document.getElementById('bar');
+function show(n){i=n%scenes.length;scenes.forEach((s,k)=>s.classList.toggle('active',k===i));bar.style.width=((i)/(scenes.length-1)*100)+'%'}
+function next(){show(i+1);if(i<5)timer=setTimeout(next,6500);else hearts()}
+function start(){show(1);timer=setTimeout(next,6500)}
+function hearts(){for(let j=0;j<45;j++){let h=document.createElement('div');h.className='heart';h.textContent=['❤️','✨','♡','💗'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'vw';h.style.setProperty('--x',(Math.random()*180-90)+'px');h.style.animationDelay=Math.random()*2+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),7000)}}
+</script>
+</body>
+</html>
